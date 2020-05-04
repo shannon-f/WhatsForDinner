@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84A2460C57000705C3D /* AppDelegate.swift */; };
+		FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84C2460C57100705C3D /* SceneDelegate.swift */; };
+		FB29C8502460C57100705C3D /* WhatsForDinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84E2460C57100705C3D /* WhatsForDinner.xcdatamodeld */; };
+		FB29C8522460C57100705C3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8512460C57100705C3D /* ContentView.swift */; };
+		FB29C8542460C57500705C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29C8532460C57500705C3D /* Assets.xcassets */; };
+		FB29C8572460C57500705C3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29C8562460C57500705C3D /* Preview Assets.xcassets */; };
+		FB29C85A2460C57500705C3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB29C8582460C57500705C3D /* LaunchScreen.storyboard */; };
+		FB29C8652460C57600705C3D /* WhatsForDinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8642460C57600705C3D /* WhatsForDinnerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB29C8612460C57600705C3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB29C83F2460C57000705C3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB29C8462460C57000705C3D;
+			remoteInfo = WhatsForDinner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB29C8472460C57000705C3D /* WhatsForDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsForDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29C84A2460C57000705C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB29C84C2460C57100705C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB29C84F2460C57100705C3D /* WhatsForDinner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatsForDinner.xcdatamodel; sourceTree = "<group>"; };
+		FB29C8512460C57100705C3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB29C8532460C57500705C3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB29C8562460C57500705C3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB29C8592460C57500705C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB29C85B2460C57500705C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB29C8602460C57600705C3D /* WhatsForDinnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsForDinnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB29C8642460C57600705C3D /* WhatsForDinnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsForDinnerTests.swift; sourceTree = "<group>"; };
+		FB29C8662460C57600705C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB29C8442460C57000705C3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29C85D2460C57600705C3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB29C83E2460C57000705C3D = {
+			isa = PBXGroup;
+			children = (
+				FB29C8492460C57000705C3D /* WhatsForDinner */,
+				FB29C8632460C57600705C3D /* WhatsForDinnerTests */,
+				FB29C8482460C57000705C3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB29C8482460C57000705C3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB29C8472460C57000705C3D /* WhatsForDinner.app */,
+				FB29C8602460C57600705C3D /* WhatsForDinnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB29C8492460C57000705C3D /* WhatsForDinner */ = {
+			isa = PBXGroup;
+			children = (
+				FB29C84A2460C57000705C3D /* AppDelegate.swift */,
+				FB29C84C2460C57100705C3D /* SceneDelegate.swift */,
+				FB29C8512460C57100705C3D /* ContentView.swift */,
+				FB29C8532460C57500705C3D /* Assets.xcassets */,
+				FB29C8582460C57500705C3D /* LaunchScreen.storyboard */,
+				FB29C85B2460C57500705C3D /* Info.plist */,
+				FB29C84E2460C57100705C3D /* WhatsForDinner.xcdatamodeld */,
+				FB29C8552460C57500705C3D /* Preview Content */,
+			);
+			path = WhatsForDinner;
+			sourceTree = "<group>";
+		};
+		FB29C8552460C57500705C3D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB29C8562460C57500705C3D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB29C8632460C57600705C3D /* WhatsForDinnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB29C8642460C57600705C3D /* WhatsForDinnerTests.swift */,
+				FB29C8662460C57600705C3D /* Info.plist */,
+			);
+			path = WhatsForDinnerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB29C8462460C57000705C3D /* WhatsForDinner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB29C8692460C57600705C3D /* Build configuration list for PBXNativeTarget "WhatsForDinner" */;
+			buildPhases = (
+				FB29C8432460C57000705C3D /* Sources */,
+				FB29C8442460C57000705C3D /* Frameworks */,
+				FB29C8452460C57000705C3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhatsForDinner;
+			productName = WhatsForDinner;
+			productReference = FB29C8472460C57000705C3D /* WhatsForDinner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB29C85F2460C57600705C3D /* WhatsForDinnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB29C86C2460C57600705C3D /* Build configuration list for PBXNativeTarget "WhatsForDinnerTests" */;
+			buildPhases = (
+				FB29C85C2460C57600705C3D /* Sources */,
+				FB29C85D2460C57600705C3D /* Frameworks */,
+				FB29C85E2460C57600705C3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB29C8622460C57600705C3D /* PBXTargetDependency */,
+			);
+			name = WhatsForDinnerTests;
+			productName = WhatsForDinnerTests;
+			productReference = FB29C8602460C57600705C3D /* WhatsForDinnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB29C83F2460C57000705C3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Shannon Fluellen";
+				TargetAttributes = {
+					FB29C8462460C57000705C3D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FB29C85F2460C57600705C3D = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FB29C8462460C57000705C3D;
+					};
+				};
+			};
+			buildConfigurationList = FB29C8422460C57000705C3D /* Build configuration list for PBXProject "WhatsForDinner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB29C83E2460C57000705C3D;
+			productRefGroup = FB29C8482460C57000705C3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB29C8462460C57000705C3D /* WhatsForDinner */,
+				FB29C85F2460C57600705C3D /* WhatsForDinnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB29C8452460C57000705C3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29C85A2460C57500705C3D /* LaunchScreen.storyboard in Resources */,
+				FB29C8572460C57500705C3D /* Preview Assets.xcassets in Resources */,
+				FB29C8542460C57500705C3D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29C85E2460C57600705C3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB29C8432460C57000705C3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */,
+				FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */,
+				FB29C8522460C57100705C3D /* ContentView.swift in Sources */,
+				FB29C8502460C57100705C3D /* WhatsForDinner.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB29C85C2460C57600705C3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB29C8652460C57600705C3D /* WhatsForDinnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB29C8622460C57600705C3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB29C8462460C57000705C3D /* WhatsForDinner */;
+			targetProxy = FB29C8612460C57600705C3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB29C8582460C57500705C3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB29C8592460C57500705C3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB29C8672460C57600705C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB29C8682460C57600705C3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB29C86A2460C57600705C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WhatsForDinner/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Q39T6ZM5D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WhatsForDinner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.WhatsForDinner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB29C86B2460C57600705C3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WhatsForDinner/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Q39T6ZM5D;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WhatsForDinner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.WhatsForDinner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FB29C86D2460C57600705C3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q39T6ZM5D;
+				INFOPLIST_FILE = WhatsForDinnerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.WhatsForDinnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsForDinner.app/WhatsForDinner";
+			};
+			name = Debug;
+		};
+		FB29C86E2460C57600705C3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q39T6ZM5D;
+				INFOPLIST_FILE = WhatsForDinnerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.WhatsForDinnerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsForDinner.app/WhatsForDinner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB29C8422460C57000705C3D /* Build configuration list for PBXProject "WhatsForDinner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29C8672460C57600705C3D /* Debug */,
+				FB29C8682460C57600705C3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB29C8692460C57600705C3D /* Build configuration list for PBXNativeTarget "WhatsForDinner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29C86A2460C57600705C3D /* Debug */,
+				FB29C86B2460C57600705C3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB29C86C2460C57600705C3D /* Build configuration list for PBXNativeTarget "WhatsForDinnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB29C86D2460C57600705C3D /* Debug */,
+				FB29C86E2460C57600705C3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB29C84E2460C57100705C3D /* WhatsForDinner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB29C84F2460C57100705C3D /* WhatsForDinner.xcdatamodel */,
+			);
+			currentVersion = FB29C84F2460C57100705C3D /* WhatsForDinner.xcdatamodel */;
+			path = WhatsForDinner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FB29C83F2460C57000705C3D /* Project object */;
+}
