@@ -9,8 +9,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            List{
+                ForEach(daysOfTheWeek, id: \.self) {
+                    Text($0)
+                }
+            }
+        
+            
+        }
     }
 }
 
