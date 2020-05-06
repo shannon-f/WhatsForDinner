@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0213062463105400131BF9 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0213052463105400131BF9 /* MealView.swift */; };
+		FB021308246314C800131BF9 /* MealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB021307246314C800131BF9 /* MealTime.swift */; };
 		FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84A2460C57000705C3D /* AppDelegate.swift */; };
 		FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84C2460C57100705C3D /* SceneDelegate.swift */; };
 		FB29C8502460C57100705C3D /* WhatsForDinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84E2460C57100705C3D /* WhatsForDinner.xcdatamodeld */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB0213052463105400131BF9 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		FB021307246314C800131BF9 /* MealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTime.swift; sourceTree = "<group>"; };
 		FB29C8472460C57000705C3D /* WhatsForDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsForDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB29C84A2460C57000705C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB29C84C2460C57100705C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				FB29C84C2460C57100705C3D /* SceneDelegate.swift */,
 				FB29C8512460C57100705C3D /* ContentView.swift */,
 				FB29C86F2460CB8B00705C3D /* DayView.swift */,
+				FB0213052463105400131BF9 /* MealView.swift */,
+				FB021307246314C800131BF9 /* MealTime.swift */,
 				FB29C8712460CBA700705C3D /* Meal.swift */,
 				FB29C8532460C57500705C3D /* Assets.xcassets */,
 				FB29C8582460C57500705C3D /* LaunchScreen.storyboard */,
@@ -220,9 +226,11 @@
 				FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */,
 				FB29C8702460CB8B00705C3D /* DayView.swift in Sources */,
 				FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */,
+				FB0213062463105400131BF9 /* MealView.swift in Sources */,
 				FB29C8522460C57100705C3D /* ContentView.swift in Sources */,
 				FB29C8722460CBA700705C3D /* Meal.swift in Sources */,
 				FB29C8502460C57100705C3D /* WhatsForDinner.xcdatamodeld in Sources */,
+				FB021308246314C800131BF9 /* MealTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

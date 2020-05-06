@@ -10,11 +10,11 @@ import SwiftUI
 
 struct DayView: View {
     var dayOfTheWeek : String
-    var meals : [Meal]
+    var meals = [MealView]()
     
     init(dayOfTheWeek: String) {
         self.dayOfTheWeek = dayOfTheWeek
-        meals = []
+        meals = [MealView(mealTime: .Breakfast, meal: Meal(entree: "Eggs", side1: "Bacon", side2: "Yogurt"))]
     }
     
     var body: some View {
@@ -23,10 +23,13 @@ struct DayView: View {
                 Text(dayOfTheWeek).font(.largeTitle).padding()
                 Spacer()
             }
-            HStack {
-                Text("Breakfast").padding()
-                Spacer()
+            List {
+                HStack {
+                    meals[0].padding()
+                    Spacer()
+                }
             }
+            
             Spacer()
         }
         
