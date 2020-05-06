@@ -15,13 +15,17 @@ struct ContentView: View {
         VStack {
             Image("meal-icon").resizable()
             Divider()
-            NavigationView {
-                List {
-                    ForEach(daysOfTheWeek, id: \.self) {
-                        Text($0)
-                    }
-                }.navigationBarTitle("Days")
+            HStack{
+                NavigationView {
+                    List {
+                        ForEach(daysOfTheWeek, id: \.self) {
+                            Text($0)
+                        }
+                    }.navigationBarTitle("Days")
+                }
+                
             }
+            
         }
     }
 }

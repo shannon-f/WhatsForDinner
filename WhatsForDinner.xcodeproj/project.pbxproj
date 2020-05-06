@@ -68,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB021309246326F500131BF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB29C8512460C57100705C3D /* ContentView.swift */,
+				FB29C86F2460CB8B00705C3D /* DayView.swift */,
+				FB0213052463105400131BF9 /* MealView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FB29C83E2460C57000705C3D = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +99,9 @@
 		FB29C8492460C57000705C3D /* WhatsForDinner */ = {
 			isa = PBXGroup;
 			children = (
+				FB021309246326F500131BF9 /* Views */,
 				FB29C84A2460C57000705C3D /* AppDelegate.swift */,
 				FB29C84C2460C57100705C3D /* SceneDelegate.swift */,
-				FB29C8512460C57100705C3D /* ContentView.swift */,
-				FB29C86F2460CB8B00705C3D /* DayView.swift */,
-				FB0213052463105400131BF9 /* MealView.swift */,
 				FB021307246314C800131BF9 /* MealTime.swift */,
 				FB29C8712460CBA700705C3D /* Meal.swift */,
 				FB29C8532460C57500705C3D /* Assets.xcassets */,

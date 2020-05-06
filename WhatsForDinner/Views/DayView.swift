@@ -12,9 +12,9 @@ struct DayView: View {
     var dayOfTheWeek : String
     var meals = [MealView]()
     
-    init(dayOfTheWeek: String) {
+    init(dayOfTheWeek: String, mealViews: [MealView]) {
         self.dayOfTheWeek = dayOfTheWeek
-        meals = [MealView(mealTime: .Breakfast, meal: Meal(entree: "Eggs", side1: "Bacon", side2: "Yogurt"))]
+        meals = mealViews
     }
     
     var body: some View {
@@ -24,10 +24,13 @@ struct DayView: View {
                 Spacer()
             }
             List {
-                HStack {
-                    meals[0].padding()
-                    Spacer()
+                VStack {
+                    HStack {
+                        meals[0].padding()
+                        Spacer()
+                    }
                 }
+                
             }
             
             Spacer()
@@ -38,6 +41,6 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(dayOfTheWeek: "Monday")
+        DayView(dayOfTheWeek: "Monday", mealViews: [MealView(mealTime: .Breakfast, meal: Meal(entree: "Eggs", side1: "Bacon", side2: "Yogurt"))])
     }
 }

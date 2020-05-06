@@ -8,8 +8,9 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
-class Meal {
+class Meal : ObservableObject {
     var entree : String
     var side1 : String
     var side2 : String
