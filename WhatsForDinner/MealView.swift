@@ -19,7 +19,15 @@ struct MealView: View {
     
     var body: some View {
         VStack {
-            Text(self.mealTime.rawValue)
+            HStack {
+                Text(self.mealTime.rawValue).font(.title)
+                Spacer()
+            }
+            HStack {
+                Text(self.meal.entree)
+                Text(self.meal.side1)
+                Text(self.meal.side2)
+            }
         }
         
     }
