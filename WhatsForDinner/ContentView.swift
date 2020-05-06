@@ -13,13 +13,15 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            List{
-                ForEach(daysOfTheWeek, id: \.self) {
-                    Text($0)
-                }
+            Image("meal-icon").resizable()
+            Divider()
+            NavigationView {
+                List {
+                    ForEach(daysOfTheWeek, id: \.self) {
+                        Text($0)
+                    }
+                }.navigationBarTitle("Days")
             }
-        
-            
         }
     }
 }
