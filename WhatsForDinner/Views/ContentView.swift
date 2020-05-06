@@ -16,14 +16,25 @@ struct ContentView: View {
             Image("meal-icon").resizable()
             Divider()
             HStack{
-                NavigationView {
-                    List {
-                        ForEach(daysOfTheWeek, id: \.self) {
-                            Text($0)
+                ZStack {
+                    NavigationView {
+                        List {
+                            ForEach(daysOfTheWeek, id: \.self) {
+                                Text($0)
+                            }
+                        }.navigationBarTitle("Days")
+                        
+                    }
+                    HStack {
+                        Spacer()
+                        VStack {
+                            Spacer()
+                            Button(action: {}) {
+                                Image(systemName: "plus.circle").resizable().frame(width: 50, height: 50).padding()
+                            }
                         }
-                    }.navigationBarTitle("Days")
+                    }
                 }
-                
             }
             
         }
