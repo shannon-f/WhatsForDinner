@@ -33,7 +33,10 @@ struct WeekView: View {
                         VStack {
                             Spacer()
                             Button(action: {}) {
-                                Image(systemName: "plus.circle").resizable().frame(width: 50, height: 50).padding()
+                                NavigationLink (destination: CreateMealView()) {
+                                        Image(systemName: "plus.circle").resizable().frame(width: 50, height: 50).padding()
+                                }
+                                
                             }
                         }
                     }
