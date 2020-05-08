@@ -14,21 +14,20 @@ struct WeekView: View {
     var day = "Monday"
     
     var body: some View {
+        NavigationView {
         VStack {
             Image("meal-icon").resizable()
             Divider()
             HStack{
                 ZStack {
-                    NavigationView {
                         List {
                             ForEach(daysOfTheWeek, id: \.self) { day in
                                 NavigationLink (destination: DayDetail(dayOfTheWeek: day, mealViews:[Meal]())) {
                                         Text(day)
                                 }
-                                
+                                .navigationBarTitle("This Week")
                             }
-                        }.navigationBarTitle("Days")
-                    }
+                        }
                     HStack {
                         Spacer()
                         VStack {
@@ -40,7 +39,7 @@ struct WeekView: View {
                     }
                 }
             }
-            
+            }
         }
     }
 }
