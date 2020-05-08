@@ -21,11 +21,9 @@ struct WeekView: View {
                 ZStack {
                     NavigationView {
                         List {
-//                            ForEach(daysOfTheWeek) { day in
-                            ForEach(daysOfTheWeek, id: \.self) {
-                                NavigationLink (destination: DayDetail(dayOfTheWeek: $0, mealViews:[Meal]())) {
-                                    // TODO replace with actual day
-                                        Text("Day")
+                            ForEach(daysOfTheWeek, id: \.self) { day in
+                                NavigationLink (destination: DayDetail(dayOfTheWeek: day, mealViews:[Meal]())) {
+                                        Text(day)
                                 }
                                 
                             }
