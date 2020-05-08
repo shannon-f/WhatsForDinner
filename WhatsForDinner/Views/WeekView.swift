@@ -8,8 +8,10 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WeekView: View {
     var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    var days = [DayDetail]()
+    var day = "Monday"
     
     var body: some View {
         VStack {
@@ -19,11 +21,15 @@ struct ContentView: View {
                 ZStack {
                     NavigationView {
                         List {
+//                            ForEach(daysOfTheWeek) { day in
                             ForEach(daysOfTheWeek, id: \.self) {
-                                Text($0)
+                                NavigationLink (destination: DayDetail(dayOfTheWeek: $0, mealViews:[Meal]())) {
+                                    // TODO replace with actual day
+                                        Text("Day")
+                                }
+                                
                             }
                         }.navigationBarTitle("Days")
-                        
                     }
                     HStack {
                         Spacer()
@@ -43,6 +49,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WeekView()
     }
 }

@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct DayView: View {
+struct DayDetail: View {
     var dayOfTheWeek : String
-    var meals = [MealView]()
+    var meals = [Meal]()
     
-    init(dayOfTheWeek: String, mealViews: [MealView]) {
+    init(dayOfTheWeek: String, mealViews: [Meal]) {
         self.dayOfTheWeek = dayOfTheWeek
         meals = mealViews
     }
@@ -26,7 +26,10 @@ struct DayView: View {
             List {
                 VStack {
                     HStack {
-                        meals[0].padding()
+                        ForEach(meals) { meal in
+                            MealView(mealTime: .Breakfast, meal: meal).padding()
+                        }
+                        
                         Spacer()
                     }
                 }
@@ -41,6 +44,6 @@ struct DayView: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(dayOfTheWeek: "Monday", mealViews: [MealView(mealTime: .Breakfast, meal: Meal(entree: "Eggs", side1: "Bacon", side2: "Yogurt"))])
+        DayDetail(dayOfTheWeek: "Monday", mealViews: [Meal(entree: "Eggs", side1: "Bacon", side2: "Yogurt")])
     }
 }

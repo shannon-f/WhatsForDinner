@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		FB0213062463105400131BF9 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0213052463105400131BF9 /* MealView.swift */; };
 		FB021308246314C800131BF9 /* MealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB021307246314C800131BF9 /* MealTime.swift */; };
+		FB02130B246373DF00131BF9 /* CreateMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB02130A246373DF00131BF9 /* CreateMealView.swift */; };
 		FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84A2460C57000705C3D /* AppDelegate.swift */; };
 		FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84C2460C57100705C3D /* SceneDelegate.swift */; };
 		FB29C8502460C57100705C3D /* WhatsForDinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84E2460C57100705C3D /* WhatsForDinner.xcdatamodeld */; };
-		FB29C8522460C57100705C3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8512460C57100705C3D /* ContentView.swift */; };
+		FB29C8522460C57100705C3D /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8512460C57100705C3D /* WeekView.swift */; };
 		FB29C8542460C57500705C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29C8532460C57500705C3D /* Assets.xcassets */; };
 		FB29C8572460C57500705C3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29C8562460C57500705C3D /* Preview Assets.xcassets */; };
 		FB29C85A2460C57500705C3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB29C8582460C57500705C3D /* LaunchScreen.storyboard */; };
 		FB29C8652460C57600705C3D /* WhatsForDinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8642460C57600705C3D /* WhatsForDinnerTests.swift */; };
-		FB29C8702460CB8B00705C3D /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C86F2460CB8B00705C3D /* DayView.swift */; };
+		FB29C8702460CB8B00705C3D /* DayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C86F2460CB8B00705C3D /* DayDetail.swift */; };
 		FB29C8722460CBA700705C3D /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8712460CBA700705C3D /* Meal.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +35,12 @@
 /* Begin PBXFileReference section */
 		FB0213052463105400131BF9 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 		FB021307246314C800131BF9 /* MealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTime.swift; sourceTree = "<group>"; };
+		FB02130A246373DF00131BF9 /* CreateMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMealView.swift; sourceTree = "<group>"; };
 		FB29C8472460C57000705C3D /* WhatsForDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsForDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB29C84A2460C57000705C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB29C84C2460C57100705C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB29C84F2460C57100705C3D /* WhatsForDinner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatsForDinner.xcdatamodel; sourceTree = "<group>"; };
-		FB29C8512460C57100705C3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB29C8512460C57100705C3D /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		FB29C8532460C57500705C3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB29C8562460C57500705C3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB29C8592460C57500705C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		FB29C8602460C57600705C3D /* WhatsForDinnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsForDinnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB29C8642460C57600705C3D /* WhatsForDinnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsForDinnerTests.swift; sourceTree = "<group>"; };
 		FB29C8662460C57600705C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB29C86F2460CB8B00705C3D /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		FB29C86F2460CB8B00705C3D /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
 		FB29C8712460CBA700705C3D /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,9 +73,10 @@
 		FB021309246326F500131BF9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FB29C8512460C57100705C3D /* ContentView.swift */,
-				FB29C86F2460CB8B00705C3D /* DayView.swift */,
+				FB29C8512460C57100705C3D /* WeekView.swift */,
+				FB29C86F2460CB8B00705C3D /* DayDetail.swift */,
 				FB0213052463105400131BF9 /* MealView.swift */,
+				FB02130A246373DF00131BF9 /* CreateMealView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,10 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */,
-				FB29C8702460CB8B00705C3D /* DayView.swift in Sources */,
+				FB29C8702460CB8B00705C3D /* DayDetail.swift in Sources */,
+				FB02130B246373DF00131BF9 /* CreateMealView.swift in Sources */,
 				FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */,
 				FB0213062463105400131BF9 /* MealView.swift in Sources */,
-				FB29C8522460C57100705C3D /* ContentView.swift in Sources */,
+				FB29C8522460C57100705C3D /* WeekView.swift in Sources */,
 				FB29C8722460CBA700705C3D /* Meal.swift in Sources */,
 				FB29C8502460C57100705C3D /* WhatsForDinner.xcdatamodeld in Sources */,
 				FB021308246314C800131BF9 /* MealTime.swift in Sources */,
