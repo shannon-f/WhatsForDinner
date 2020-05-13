@@ -9,12 +9,14 @@
 import SwiftUI
 
 struct CreateMealView: View {
-//    @Binding var entree : String?
+    @State var entree  = ""
+    @State var side1  = ""
     
     var body: some View {
-        VStack (alignment: .leading) {
-            Text("New Meal").font(.largeTitle)
-//            TextField("Entree", text: entree)
+        VStack {
+            Text("New Meal")
+            TextField("Entree", text: $entree)
+            TextField("Side 1", text: $side1)
         }
     }
 }
