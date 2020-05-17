@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct WeekView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
     var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var days = [DayDetail]()
     var day = "Monday"
@@ -22,7 +23,7 @@ struct WeekView: View {
                 ZStack {
                         List {
                             ForEach(daysOfTheWeek, id: \.self) { day in
-                                NavigationLink (destination: DayDetail(dayOfTheWeek: day, mealViews:[Meal]())) {
+                                NavigationLink (destination: DayDetail(dayOfTheWeek: day/*, mealViews:[Meal]()*/)) {
                                         Text(day)
                                 }
                                 .navigationBarTitle("This Week")

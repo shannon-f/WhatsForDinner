@@ -10,12 +10,13 @@ import SwiftUI
 
 struct DayDetail: View {
     var dayOfTheWeek : String
-    var meals = [Meal]()
-    
-    init(dayOfTheWeek: String, mealViews: [Meal]) {
-        self.dayOfTheWeek = dayOfTheWeek
-        meals = mealViews
-    }
+    @FetchRequest(
+        entity: Meal.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \Meal.name, ascending: true)
+        ]/*,
+        predicate: NSPredicate(format: "date == %@", "Dinner")*/
+    ) var meals: FetchedResults<Meal>
     
     var body: some View {
         VStack {
@@ -26,8 +27,13 @@ struct DayDetail: View {
             List {
                 VStack {
                     HStack {
-                        ForEach(meals) { meal in
-                            MealView(mealTime: .Breakfast, meal: meal).padding()
+                        ForEach(meals, id: \.self) { meal in
+                            VStack {
+                                Text(meal.name ?? "")
+                                Text(meal.entree ?? "")
+                                Text(meal.side1 ?? "")
+                                Text(meal.side2 ?? "")
+                            }
                         }
                         
                         Spacer()
@@ -44,6 +50,11 @@ struct DayDetail: View {
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
-        DayDetail(dayOfTheWeek: "Monday", mealViews: [Meal(entree: "Eggs", side1: "Bacon", side2: "Yogurt")])
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //Test data
+                let newMeal = Meal.init(context: context)
+        newMeal.name = "Breakfast"
+        newMeal.entree = "Eggs"
+        return DayDetail(dayOfTheWeek: "Monday")
     }
 }

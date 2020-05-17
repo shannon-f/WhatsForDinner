@@ -19,15 +19,16 @@ struct MealView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text(self.mealTime.rawValue).font(.title)
+//            HStack {
+                Text(self.meal.name ?? "").font(.title)
                 Spacer()
-            }
-            HStack {
-                Text(self.meal.entree)
-                Text(self.meal.side1)
-                Text(self.meal.side2)
-            }
+//            }
+//            HStack {
+//                Text("Test")
+                Text(self.meal.entree ?? "")
+//                Text(self.meal.side1)
+//                Text(self.meal.side2)
+//            }
         }
         
     }
@@ -35,6 +36,11 @@ struct MealView: View {
 
 struct MealView_Previews: PreviewProvider {
     static var previews: some View {
-        MealView(mealTime: .Breakfast, meal: Meal(entree: "Eggs", side1: "Bacon", side2: "Yogurt"))
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //Test data
+        let newMeal = Meal.init(context: context)
+        newMeal.name = "Breakfast"
+        newMeal.entree = "Eggs"
+        return MealView(mealTime: .Breakfast, meal: newMeal)
     }
 }
