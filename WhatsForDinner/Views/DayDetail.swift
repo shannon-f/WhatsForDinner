@@ -10,13 +10,7 @@ import SwiftUI
 
 struct DayDetail: View {
     var dayOfTheWeek : String
-    @FetchRequest(
-        entity: Meal.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \Meal.name, ascending: true)
-        ]/*,
-        predicate: NSPredicate(format: "date == %@", "Dinner")*/
-    ) var meals: FetchedResults<Meal>
+    var meals : [Meal]
     
     var body: some View {
         VStack {
@@ -27,13 +21,26 @@ struct DayDetail: View {
             List {
                 VStack {
                     HStack {
-                        ForEach(meals, id: \.self) { meal in
-                            VStack {
-                                Text(meal.name ?? "")
-                                Text(meal.entree ?? "")
-                                Text(meal.side1 ?? "")
-                                Text(meal.side2 ?? "")
+                        
+                        ForEach(self.meals.filter {
+                            func dateToDayOfWeek(_ date: Date) -> String {
+                                let dateFormatter = DateFormatter()
+                                dateFormatter.dateFormat = "EEEE"
+                                // todo replace Date() with meal date
+                                let dayOfWeekString = dateFormatter.string(from: date)
+                                return dayOfWeekString
                             }
+                            
+                            return dateToDayOfWeek($0.date!) == dayOfTheWeek
+                            
+                        }, id: \.self) { meal in
+                                VStack {
+                                    Text(meal.name ?? "")
+                                    Text(meal.entree ?? "")
+                                    Text(meal.side1 ?? "")
+                                    Text(meal.side2 ?? "")
+                                }
+                            
                         }
                         
                         Spacer()
@@ -46,15 +53,26 @@ struct DayDetail: View {
         }
         
     }
+    
+    func dateToDayOfWeek() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        // todo replace Date() with meal date
+        let date = Date()
+        let dayOfWeekString = dateFormatter.string(from: date)
+        return dayOfWeekString
+    }
 }
 
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         //Test data
-                let newMeal = Meal.init(context: context)
+        let newMeal = Meal.init(context: context)
         newMeal.name = "Breakfast"
         newMeal.entree = "Eggs"
-        return DayDetail(dayOfTheWeek: "Monday")
+        newMeal.date = Date()
+        return DayDetail(dayOfTheWeek: "Monday", meals: [newMeal])
+        
     }
 }
