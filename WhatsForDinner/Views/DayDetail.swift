@@ -26,7 +26,6 @@ struct DayDetail: View {
                             func dateToDayOfWeek(_ date: Date) -> String {
                                 let dateFormatter = DateFormatter()
                                 dateFormatter.dateFormat = "EEEE"
-                                // todo replace Date() with meal date
                                 let dayOfWeekString = dateFormatter.string(from: date)
                                 return dayOfWeekString
                             }

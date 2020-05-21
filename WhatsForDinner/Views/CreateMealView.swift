@@ -11,11 +11,14 @@ import CoreData
 
 struct CreateMealView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
-    
+    // TODO refactor to have a variable number of food items, pull food data from https://fdc.nal.usda.gov and use to autocomplete meal item fields
     @State var entree  = ""
     @State var mealName = ""
+    @State var mealTime : MealTime?
     @State var side1  = ""
     @State var side2  = ""
+    
+    
 
     
     var dateFormatter: DateFormatter {
@@ -29,10 +32,17 @@ struct CreateMealView: View {
     var body: some View {
        
         VStack {
+            // TODO improve the date picker, maybe only display days of the week and convert that to a date
             DatePicker(selection: $mealDate, in: Date()..., displayedComponents: .date) {
                 Text("Meal date")
             }.padding(.top)
 //            Spacer()
+            Picker("Meal Time", selection: $mealTime) {
+                ForEach(MealTime.allCases, id: \.self) { mealTime in
+                    Text(mealTime.rawValue)
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle()).padding()
             TextField("Meal Name", text: $mealName).padding()
 //            Divider()
             TextField("Entree", text: $entree).padding()
@@ -40,6 +50,7 @@ struct CreateMealView: View {
             TextField("Side 2", text: $side2).padding()
             Button(action:{
                 self.saveMeal()
+                
             }) {
                 Text("Save Meal")
             }
