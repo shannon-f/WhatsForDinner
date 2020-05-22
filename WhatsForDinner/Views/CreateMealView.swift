@@ -14,7 +14,7 @@ struct CreateMealView: View {
     // TODO refactor to have a variable number of food items, pull food data from https://fdc.nal.usda.gov and use to autocomplete meal item fields
     @State var entree  = ""
     @State var mealName = ""
-    @State var mealTime : MealTime?
+    @State var mealTime = ""
     @State var side1  = ""
     @State var side2  = ""
     
@@ -38,8 +38,9 @@ struct CreateMealView: View {
             }.padding(.top)
 //            Spacer()
             Picker("Meal Time", selection: $mealTime) {
+                
                 ForEach(MealTime.allCases, id: \.self) { mealTime in
-                    Text(mealTime.rawValue)
+                    Text(mealTime.rawValue).tag(mealTime.rawValue)
                 }
             }
             .pickerStyle(SegmentedPickerStyle()).padding()
@@ -65,8 +66,7 @@ struct CreateMealView: View {
         newMeal.side1 = side1
         newMeal.side2 = side2
         newMeal.date = mealDate
-        print(mealTime?.rawValue ?? "no value")
-        newMeal.mealTime = mealTime?.rawValue
+        newMeal.mealTime = mealTime
         do {
           try managedObjectContext.save()
         } catch let error as NSError {

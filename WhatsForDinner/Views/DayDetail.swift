@@ -19,28 +19,15 @@ struct DayDetail: View {
                 Spacer()
             }
             List {
-//                VStack {
-//                    HStack {
                         ForEach(self.meals.filter {
-                            func dateToDayOfWeek(_ date: Date) -> String {
-                                let dateFormatter = DateFormatter()
-                                dateFormatter.dateFormat = "EEEE"
-                                let dayOfWeekString = dateFormatter.string(from: date)
-                                return dayOfWeekString
-                            }
-                            
                             return dateToDayOfWeek($0.date!) == dayOfTheWeek
-                            
                         }, id: \.self) { meal in
 //                            Section(header: Text("Test")) {
                                     MealView(meal: meal)
+                            
 //                                }
                             
                         }
-                        
-                        
-//                    }
-//                }
                 
             }
             
@@ -49,7 +36,7 @@ struct DayDetail: View {
         
     }
     
-    func dateToDayOfWeek() -> String {
+    func dateToDayOfWeek(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         // todo replace Date() with meal date
