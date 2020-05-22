@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MealTime: String {
+enum MealTime: String, CaseIterable {
     case Breakfast = "Breakfast"
     case Lunch = "Lunch"
     case Dinner = "Dinner"

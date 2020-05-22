@@ -9,26 +9,43 @@
 import SwiftUI
 
 struct MealView: View {
-    var mealTime : MealTime
+//    var mealTime : MealTime
     var meal : Meal
     
-    init(mealTime: MealTime, meal : Meal) {
-        self.mealTime = mealTime
-        self.meal = meal
-    }
+//    init(mealTime: MealTime, meal : Meal) {
+//        self.mealTime = mealTime
+//        self.meal = meal
+//    }
     
     var body: some View {
         VStack {
 //            HStack {
-                Text(self.meal.name ?? "").font(.title)
+            HStack {
+                Text(self.meal.mealTime ?? "").font(.largeTitle)
+                Spacer()
+            }
+//                Text(self.meal.name ?? "").font(.title)
                 Spacer()
 //            }
-//            HStack {
-//                Text("Test")
-                Text(self.meal.entree ?? "")
-//                Text(self.meal.side1)
-//                Text(self.meal.side2)
-//            }
+            HStack {
+                VStack {
+                    HStack {
+                        Text(self.meal.entree ?? "").padding()
+                        Spacer()
+                    }
+                    Divider()
+                    HStack {
+                        Text(self.meal.side1 ?? "").padding()
+                        Spacer()
+                    }
+                    Divider()
+                    HStack {
+                        Text(self.meal.side2 ?? "").padding()
+                        Spacer()
+                    }
+                }
+                Spacer()
+            }
         }
         
     }
@@ -39,8 +56,11 @@ struct MealView_Previews: PreviewProvider {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         //Test data
         let newMeal = Meal.init(context: context)
-        newMeal.name = "Breakfast"
+        newMeal.name = "The Usual"
+        newMeal.mealTime = MealTime.Breakfast.rawValue
         newMeal.entree = "Eggs"
-        return MealView(mealTime: .Breakfast, meal: newMeal)
+        newMeal.side1 = "Bacon"
+        newMeal.side2 = "Toast"
+        return MealView(meal: newMeal)
     }
 }

@@ -19,9 +19,8 @@ struct DayDetail: View {
                 Spacer()
             }
             List {
-                VStack {
-                    HStack {
-                        
+//                VStack {
+//                    HStack {
                         ForEach(self.meals.filter {
                             func dateToDayOfWeek(_ date: Date) -> String {
                                 let dateFormatter = DateFormatter()
@@ -33,18 +32,15 @@ struct DayDetail: View {
                             return dateToDayOfWeek($0.date!) == dayOfTheWeek
                             
                         }, id: \.self) { meal in
-                                VStack {
-                                    Text(meal.name ?? "")
-                                    Text(meal.entree ?? "")
-                                    Text(meal.side1 ?? "")
-                                    Text(meal.side2 ?? "")
-                                }
+//                            Section(header: Text("Test")) {
+                                    MealView(meal: meal)
+//                                }
                             
                         }
                         
-                        Spacer()
-                    }
-                }
+                        
+//                    }
+//                }
                 
             }
             
@@ -68,10 +64,12 @@ struct DayView_Previews: PreviewProvider {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         //Test data
         let newMeal = Meal.init(context: context)
-        newMeal.name = "Breakfast"
+        newMeal.mealTime = "Breakfast"
         newMeal.entree = "Eggs"
+        newMeal.side1 = "Bacon"
+        newMeal.side2 = "Toast"
         newMeal.date = Date()
-        return DayDetail(dayOfTheWeek: "Monday", meals: [newMeal])
+        return DayDetail(dayOfTheWeek: "Thursday", meals: [newMeal])
         
     }
 }

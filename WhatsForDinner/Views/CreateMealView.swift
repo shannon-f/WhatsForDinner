@@ -65,6 +65,8 @@ struct CreateMealView: View {
         newMeal.side1 = side1
         newMeal.side2 = side2
         newMeal.date = mealDate
+        print(mealTime?.rawValue ?? "no value")
+        newMeal.mealTime = mealTime?.rawValue
         do {
           try managedObjectContext.save()
         } catch let error as NSError {
