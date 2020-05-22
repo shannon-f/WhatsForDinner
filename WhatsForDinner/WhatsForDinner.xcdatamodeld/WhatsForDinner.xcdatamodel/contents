@@ -4,11 +4,16 @@
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="entree" optional="YES" attributeType="String"/>
         <attribute name="mealTime" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="side1" optional="YES" attributeType="String"/>
         <attribute name="side2" optional="YES" attributeType="String"/>
+        <relationship name="mealItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MealItem" inverseName="meals" inverseEntity="MealItem"/>
+    </entity>
+    <entity name="MealItem" representedClassName="MealItem" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="meals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Meal" inverseName="mealItems" inverseEntity="Meal"/>
     </entity>
     <elements>
         <element name="Meal" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="MealItem" positionX="-63" positionY="27" width="128" height="73"/>
     </elements>
 </model>

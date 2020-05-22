@@ -56,7 +56,6 @@ struct MealView_Previews: PreviewProvider {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         //Test data
         let newMeal = Meal.init(context: context)
-        newMeal.name = "The Usual"
         newMeal.mealTime = MealTime.Breakfast.rawValue
         newMeal.entree = "Eggs"
         newMeal.side1 = "Bacon"

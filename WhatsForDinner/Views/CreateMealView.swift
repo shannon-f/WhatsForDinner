@@ -13,7 +13,6 @@ struct CreateMealView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     // TODO refactor to have a variable number of food items, pull food data from https://fdc.nal.usda.gov and use to autocomplete meal item fields
     @State var entree  = ""
-    @State var mealName = ""
     @State var mealTime = ""
     @State var side1  = ""
     @State var side2  = ""
@@ -44,7 +43,6 @@ struct CreateMealView: View {
                 }
             }
             .pickerStyle(SegmentedPickerStyle()).padding()
-            TextField("Meal Name", text: $mealName).padding()
 //            Divider()
             TextField("Entree", text: $entree).padding()
             TextField("Side 1", text: $side1).padding()
@@ -61,7 +59,6 @@ struct CreateMealView: View {
     
     func saveMeal() {
         let newMeal = Meal(context: self.managedObjectContext)
-        newMeal.name = mealName
         newMeal.entree = entree
         newMeal.side1 = side1
         newMeal.side2 = side2

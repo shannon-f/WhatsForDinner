@@ -16,12 +16,13 @@ struct WeekView: View {
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [
-            NSSortDescriptor(keyPath: \Meal.name, ascending: true)
+            NSSortDescriptor(keyPath: \Meal.mealTime, ascending: true)
         ]/*, TODO move this to day's view and figure out how to use filter based on what day of the week the date is
         predicate: NSPredicate(format: "date == %@", "Dinner")*/
     ) var meals: FetchedResults<Meal>
     
     var body: some View {
+        // TODO convert this into tabbed view
         NavigationView {
         VStack {
             // TODO replace this with collage of week's meal images?
@@ -43,6 +44,7 @@ struct WeekView: View {
                         VStack {
                             Spacer()
                             Button(action: {}) {
+                                // TODO refactor this into a modal sheet?
                                 NavigationLink (destination: CreateMealView()) {
                                         Image(systemName: "plus.circle").resizable().frame(width: 50, height: 50).padding()
                                 }

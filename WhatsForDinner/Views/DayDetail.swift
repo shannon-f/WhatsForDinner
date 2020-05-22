@@ -35,15 +35,6 @@ struct DayDetail: View {
         }
         
     }
-    
-    func dateToDayOfWeek(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        // todo replace Date() with meal date
-        let date = Date()
-        let dayOfWeekString = dateFormatter.string(from: date)
-        return dayOfWeekString
-    }
 }
 
 struct DayView_Previews: PreviewProvider {
@@ -56,7 +47,14 @@ struct DayView_Previews: PreviewProvider {
         newMeal.side1 = "Bacon"
         newMeal.side2 = "Toast"
         newMeal.date = Date()
-        return DayDetail(dayOfTheWeek: "Thursday", meals: [newMeal])
+        return DayDetail(dayOfTheWeek: dateToDayOfWeek(newMeal.date!), meals: [newMeal])
         
     }
+}
+
+func dateToDayOfWeek(_ date: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE"
+    let dayOfWeekString = dateFormatter.string(from: date)
+    return dayOfWeekString
 }

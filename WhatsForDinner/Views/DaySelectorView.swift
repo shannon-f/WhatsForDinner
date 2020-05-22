@@ -13,7 +13,7 @@ struct DaySelectorView: View {
         VStack {
             ForEach(Day.allCases, id: \.self) { day in
                 Button(action: {}){
-                    Text(day.rawValue).background(Circle().border(Color.blue).frame(width: 100, height: 100)).clipped()
+                    Text(day.rawValue).background(Circle().border(Color.blue).frame(width: 100, height: 100)).clipped().padding()
                 }
                 
             }
