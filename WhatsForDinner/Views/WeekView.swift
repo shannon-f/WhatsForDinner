@@ -12,7 +12,6 @@ struct WeekView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var days = [DayDetail]()
-    var day = "Monday"
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [
@@ -68,7 +67,7 @@ struct WeekView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct WeekView_Previews: PreviewProvider {
     static var previews: some View {
         WeekView().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     }
