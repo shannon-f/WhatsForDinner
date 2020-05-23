@@ -14,7 +14,17 @@ struct MealView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(self.meal.mealTime ?? "").font(.largeTitle)
+                VStack {
+                    HStack {
+                        Text(self.meal.date?.toDayOfTheWeek() ?? "").font(.largeTitle).padding()
+                        Spacer()
+                    }
+                    HStack {
+                        Text(self.meal.mealTime ?? "").font(.title).padding()
+                        Spacer()
+                    }
+                }
+                
                 Spacer()
             }
             HStack {
@@ -48,6 +58,7 @@ struct MealView_Previews: PreviewProvider {
         //Test data
         let newMeal = Meal.init(context: context)
         newMeal.mealTime = MealTime.Breakfast.rawValue
+        newMeal.date = Date()
         newMeal.entree = "Eggs"
         newMeal.side1 = "Bacon"
         newMeal.side2 = "Toast"

@@ -10,12 +10,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
+    @State var creatingMeal = false
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [
             NSSortDescriptor(keyPath: \Meal.mealTime, ascending: true)
-        ]/*, TODO move this to day's view and figure out how to use filter based on what day of the week the date is
-        predicate: NSPredicate(format: "date == %@", "Dinner")*/
+        ]
     ) var meals: FetchedResults<Meal>
     
     var body: some View {
@@ -23,13 +23,18 @@ struct ContentView: View {
             VStack {
                 WeekView(meals: Array(meals))
             }.tabItem {
-                VStack {
-                    Text("Week")
-                }
+                Text("Week")
             }.tag(0)
-            
+            VStack {
+                CreateMealView()
+            }.tabItem {
+                VStack {
+                    Image(systemName: "plus.circle")
+                    Text("Create Meal")
+                }
+            }.tag(1)
             VStack{
-//                MealsView(meals: Array(meals))
+                // TODO sort chronologically
                 ForEach(meals, id: \.self) { meal in
                     MealView(meal: meal)
                 }
@@ -37,7 +42,7 @@ struct ContentView: View {
                 VStack {
                     Text("Meals")
                 }
-            }.tag(1)
+            }.tag(2)
         }
     }
 }

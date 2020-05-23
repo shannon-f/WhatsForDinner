@@ -17,36 +17,19 @@ struct WeekView: View {
     var body: some View {
         // TODO convert this into tabbed view
         NavigationView {
-        VStack {
-            // TODO replace this with collage of week's meal images?
-            Image("meal-icon").resizable()
-            Divider()
-            HStack{
-                ZStack {
-                        List {
-                            ForEach(daysOfTheWeek, id: \.self) { day in
-                                
-                                NavigationLink (destination: DayDetail(dayOfTheWeek: day, meals:Array(self.meals))) {
-                                        Text(day)
-                                }
-                                .navigationBarTitle("This Week")
-                            }
+            VStack {
+                // TODO replace this with collage of week's meal images?
+                Image("meal-icon").resizable()
+                Divider()
+                List {
+                    ForEach(daysOfTheWeek, id: \.self) { day in
+                        
+                        NavigationLink (destination: DayDetail(dayOfTheWeek: day, meals:Array(self.meals))) {
+                                Text(day)
                         }
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Spacer()
-                            Button(action: {}) {
-                                // TODO refactor this into a modal sheet?
-                                NavigationLink (destination: CreateMealView()) {
-                                        Image(systemName: "plus.circle").resizable().frame(width: 50, height: 50).padding()
-                                }
-                                
-                            }
-                        }
+                        .navigationBarTitle("This Week")
                     }
                 }
-            }
             }
         }
     }

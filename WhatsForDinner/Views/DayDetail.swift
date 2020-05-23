@@ -14,10 +14,6 @@ struct DayDetail: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text(dayOfTheWeek).font(.largeTitle).padding()
-                Spacer()
-            }
             List {
                 ForEach(self.meals.filter {
                     return $0.date!.toDayOfTheWeek() == dayOfTheWeek
