@@ -12,13 +12,7 @@ struct WeekView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var days = [DayDetail]()
-    @FetchRequest(
-        entity: Meal.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \Meal.mealTime, ascending: true)
-        ]/*, TODO move this to day's view and figure out how to use filter based on what day of the week the date is
-        predicate: NSPredicate(format: "date == %@", "Dinner")*/
-    ) var meals: FetchedResults<Meal>
+    var meals: [Meal]
     
     var body: some View {
         // TODO convert this into tabbed view
@@ -69,6 +63,13 @@ struct WeekView: View {
 
 struct WeekView_Previews: PreviewProvider {
     static var previews: some View {
-        WeekView().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        let newMeal = Meal()
+        newMeal.mealTime = MealTime.Breakfast.rawValue
+        newMeal.entree = "Eggs"
+        newMeal.side1 = "Bacon"
+        newMeal.side2 = "Toast"
+        
+        let meals = [newMeal]
+        return WeekView(meals: meals).environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     }
 }

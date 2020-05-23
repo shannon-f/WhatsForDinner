@@ -21,7 +21,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selection){
             VStack {
-                WeekView()
+                WeekView(meals: Array(meals))
             }.tabItem {
                 VStack {
                     Text("Week")
