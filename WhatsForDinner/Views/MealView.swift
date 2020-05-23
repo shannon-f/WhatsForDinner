@@ -9,24 +9,14 @@
 import SwiftUI
 
 struct MealView: View {
-//    var mealTime : MealTime
     var meal : Meal
-    
-//    init(mealTime: MealTime, meal : Meal) {
-//        self.mealTime = mealTime
-//        self.meal = meal
-//    }
     
     var body: some View {
         VStack {
-//            HStack {
             HStack {
                 Text(self.meal.mealTime ?? "").font(.largeTitle)
                 Spacer()
             }
-//                Text(self.meal.name ?? "").font(.title)
-                Spacer()
-//            }
             HStack {
                 VStack {
                     HStack {
@@ -46,6 +36,7 @@ struct MealView: View {
                 }
                 Spacer()
             }
+            
         }
         
     }

@@ -29,7 +29,10 @@ struct ContentView: View {
             }.tag(0)
             
             VStack{
-                MealsView(meals: Array(meals))
+//                MealsView(meals: Array(meals))
+                ForEach(meals, id: \.self) { meal in
+                    MealView(meal: meal)
+                }
             }.tabItem {
                 VStack {
                     Text("Meals")

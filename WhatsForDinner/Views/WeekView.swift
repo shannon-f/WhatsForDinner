@@ -50,15 +50,6 @@ struct WeekView: View {
             }
         }
     }
-    
-    func dateToDayOfWeek(date: String) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        // todo replace Date() with meal date
-        let date = Date()
-        let dayOfWeekString = dateFormatter.string(from: date)
-        return dayOfWeekString
-    }
 }
 
 struct WeekView_Previews: PreviewProvider {

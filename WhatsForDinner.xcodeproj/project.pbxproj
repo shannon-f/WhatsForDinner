@@ -11,7 +11,7 @@
 		FB021308246314C800131BF9 /* MealTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB021307246314C800131BF9 /* MealTime.swift */; };
 		FB02130B246373DF00131BF9 /* CreateMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB02130A246373DF00131BF9 /* CreateMealView.swift */; };
 		FB091C3A24786A1300C3BC9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB091C3924786A1300C3BC9D /* ContentView.swift */; };
-		FB091C3C24786C1C00C3BC9D /* MealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB091C3B24786C1C00C3BC9D /* MealsView.swift */; };
+		FB091C3E2478B74600C3BC9D /* DateToDayFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB091C3D2478B74600C3BC9D /* DateToDayFormatter.swift */; };
 		FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84A2460C57000705C3D /* AppDelegate.swift */; };
 		FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C84C2460C57100705C3D /* SceneDelegate.swift */; };
 		FB29C8522460C57100705C3D /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8512460C57100705C3D /* WeekView.swift */; };
@@ -41,7 +41,7 @@
 		FB021307246314C800131BF9 /* MealTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTime.swift; sourceTree = "<group>"; };
 		FB02130A246373DF00131BF9 /* CreateMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMealView.swift; sourceTree = "<group>"; };
 		FB091C3924786A1300C3BC9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FB091C3B24786C1C00C3BC9D /* MealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsView.swift; sourceTree = "<group>"; };
+		FB091C3D2478B74600C3BC9D /* DateToDayFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateToDayFormatter.swift; path = WhatsForDinner/DateToDayFormatter.swift; sourceTree = SOURCE_ROOT; };
 		FB29C8472460C57000705C3D /* WhatsForDinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsForDinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB29C84A2460C57000705C3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB29C84C2460C57100705C3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,7 +82,6 @@
 			children = (
 				FB29C8512460C57100705C3D /* WeekView.swift */,
 				FB091C3924786A1300C3BC9D /* ContentView.swift */,
-				FB091C3B24786C1C00C3BC9D /* MealsView.swift */,
 				FB29C86F2460CB8B00705C3D /* DayDetail.swift */,
 				FB0213052463105400131BF9 /* MealView.swift */,
 				FB02130A246373DF00131BF9 /* CreateMealView.swift */,
@@ -112,6 +111,7 @@
 		FB29C8492460C57000705C3D /* WhatsForDinner */ = {
 			isa = PBXGroup;
 			children = (
+				FB091C3D2478B74600C3BC9D /* DateToDayFormatter.swift */,
 				FB021309246326F500131BF9 /* Views */,
 				FB29C84A2460C57000705C3D /* AppDelegate.swift */,
 				FB29C84C2460C57100705C3D /* SceneDelegate.swift */,
@@ -246,6 +246,7 @@
 			files = (
 				FB29C84B2460C57100705C3D /* AppDelegate.swift in Sources */,
 				FB091C3A24786A1300C3BC9D /* ContentView.swift in Sources */,
+				FB091C3E2478B74600C3BC9D /* DateToDayFormatter.swift in Sources */,
 				FB29C8702460CB8B00705C3D /* DayDetail.swift in Sources */,
 				FB02130B246373DF00131BF9 /* CreateMealView.swift in Sources */,
 				FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */,
@@ -255,7 +256,6 @@
 				FBD34E76246CD59400617FFB /* Day.swift in Sources */,
 				FB021308246314C800131BF9 /* MealTime.swift in Sources */,
 				FBD34E7E2470C6FD00617FFB /* WhatsForDinner.xcdatamodel in Sources */,
-				FB091C3C24786C1C00C3BC9D /* MealsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

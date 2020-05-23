@@ -19,18 +19,12 @@ struct DayDetail: View {
                 Spacer()
             }
             List {
-                        ForEach(self.meals.filter {
-                            return dateToDayOfWeek($0.date!) == dayOfTheWeek
-                        }, id: \.self) { meal in
-//                            Section(header: Text("Test")) {
-                                    MealView(meal: meal)
-                            
-//                                }
-                            
-                        }
-                
+                ForEach(self.meals.filter {
+                    return $0.date!.toDayOfTheWeek() == dayOfTheWeek
+                }, id: \.self) { meal in
+                    MealView(meal: meal)
+                }
             }
-            
             Spacer()
         }
         
@@ -47,14 +41,7 @@ struct DayView_Previews: PreviewProvider {
         newMeal.side1 = "Bacon"
         newMeal.side2 = "Toast"
         newMeal.date = Date()
-        return DayDetail(dayOfTheWeek: dateToDayOfWeek(newMeal.date!), meals: [newMeal])
+        return DayDetail(dayOfTheWeek: newMeal.date!.toDayOfTheWeek(), meals: [newMeal])
         
     }
-}
-
-func dateToDayOfWeek(_ date: Date) -> String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "EEEE"
-    let dayOfWeekString = dateFormatter.string(from: date)
-    return dayOfWeekString
 }
