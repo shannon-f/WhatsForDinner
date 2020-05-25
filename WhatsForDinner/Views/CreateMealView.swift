@@ -16,6 +16,7 @@ struct CreateMealView: View {
     @State var mealTime = ""
     @State var side1  = ""
     @State var side2  = ""
+    @State var day : Day?
     
     
 
@@ -31,9 +32,10 @@ struct CreateMealView: View {
     var body: some View {
        
         VStack {
-            // TODO improve the date picker, maybe only display days of the week and convert that to a date
-            DatePicker("", selection: $mealDate, in: Date()...) .padding(.top)
+            // TODO improve the date picker, maybe only display days of the week and convert that to a date, maybe even tie the day of the week segmented picker to the date picker?
+//            DatePicker("", selection: $mealDate, in: Date()...) .padding(.top)
 //            Spacer()
+            DayPickerView(mealDay: $day).padding()
             Picker("Meal Time", selection: $mealTime) {
                 
                 ForEach(MealTime.allCases, id: \.self) { mealTime in
@@ -73,7 +75,7 @@ struct CreateMealView: View {
 
 struct CreateMealView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateMealView()
+        CreateMealView(day: Day.Monday).environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     }
 }
 

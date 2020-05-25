@@ -8,21 +8,23 @@
 
 import SwiftUI
 
-struct DaySelectorView: View {
+struct DayPickerView: View {
+    @Binding var mealDay : Day?
+    
     var body: some View {
-        VStack {
+        Picker("Meal Day", selection: $mealDay) {
             ForEach(Day.allCases, id: \.self) { day in
                 Button(action: {}){
-                    Text(day.rawValue).background(Circle().border(Color.blue).frame(width: 100, height: 100)).clipped().padding()
+                    Text((day.rawValue).prefix(2)).border(Color.blue).frame(width: 400, height: 200)
                 }
                 
             }
-        }
+        }.pickerStyle(SegmentedPickerStyle()).padding()
     }
 }
 
 struct DaySelectorView_Previews: PreviewProvider {
     static var previews: some View {
-        DaySelectorView()
+        DayPickerView(mealDay: .constant(.Monday))
     }
 }

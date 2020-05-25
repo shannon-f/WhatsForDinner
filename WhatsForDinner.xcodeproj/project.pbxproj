@@ -21,7 +21,7 @@
 		FB29C8652460C57600705C3D /* WhatsForDinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C8642460C57600705C3D /* WhatsForDinnerTests.swift */; };
 		FB29C8702460CB8B00705C3D /* DayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29C86F2460CB8B00705C3D /* DayDetail.swift */; };
 		FBD34E76246CD59400617FFB /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD34E75246CD59400617FFB /* Day.swift */; };
-		FBD34E78246F941F00617FFB /* DaySelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD34E77246F941F00617FFB /* DaySelectorView.swift */; };
+		FBD34E78246F941F00617FFB /* DayPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD34E77246F941F00617FFB /* DayPickerView.swift */; };
 		FBD34E7E2470C6FD00617FFB /* WhatsForDinner.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FBD34E7D2470C6FD00617FFB /* WhatsForDinner.xcdatamodel */; };
 		FBD34E7F2470C6FD00617FFB /* WhatsForDinner.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = FBD34E7D2470C6FD00617FFB /* WhatsForDinner.xcdatamodel */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,7 @@
 		FB29C8662460C57600705C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB29C86F2460CB8B00705C3D /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
 		FBD34E75246CD59400617FFB /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		FBD34E77246F941F00617FFB /* DaySelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySelectorView.swift; sourceTree = "<group>"; };
+		FBD34E77246F941F00617FFB /* DayPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPickerView.swift; sourceTree = "<group>"; };
 		FBD34E7D2470C6FD00617FFB /* WhatsForDinner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = WhatsForDinner.xcdatamodel; path = WhatsForDinner.xcdatamodeld/WhatsForDinner.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +85,7 @@
 				FB29C86F2460CB8B00705C3D /* DayDetail.swift */,
 				FB0213052463105400131BF9 /* MealView.swift */,
 				FB02130A246373DF00131BF9 /* CreateMealView.swift */,
-				FBD34E77246F941F00617FFB /* DaySelectorView.swift */,
+				FBD34E77246F941F00617FFB /* DayPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 				FB02130B246373DF00131BF9 /* CreateMealView.swift in Sources */,
 				FB29C84D2460C57100705C3D /* SceneDelegate.swift in Sources */,
 				FB0213062463105400131BF9 /* MealView.swift in Sources */,
-				FBD34E78246F941F00617FFB /* DaySelectorView.swift in Sources */,
+				FBD34E78246F941F00617FFB /* DayPickerView.swift in Sources */,
 				FB29C8522460C57100705C3D /* WeekView.swift in Sources */,
 				FBD34E76246CD59400617FFB /* Day.swift in Sources */,
 				FB021308246314C800131BF9 /* MealTime.swift in Sources */,

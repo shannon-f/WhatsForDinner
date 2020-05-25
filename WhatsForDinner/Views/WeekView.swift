@@ -14,7 +14,6 @@ struct WeekView: View {
     var meals: [Meal]
     
     var body: some View {
-        // TODO convert this into tabbed view
         NavigationView {
             VStack {
                 // TODO replace this with collage of week's meal images?
@@ -38,6 +37,7 @@ struct WeekView_Previews: PreviewProvider {
     static var previews: some View {
         let newMeal = Meal()
         newMeal.mealTime = MealTime.Breakfast.rawValue
+        newMeal.date = Date()
         newMeal.entree = "Eggs"
         newMeal.side1 = "Bacon"
         newMeal.side2 = "Toast"
