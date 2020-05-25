@@ -32,9 +32,7 @@ struct CreateMealView: View {
        
         VStack {
             // TODO improve the date picker, maybe only display days of the week and convert that to a date
-            DatePicker(selection: $mealDate, in: Date()..., displayedComponents: .date) {
-                Text(mealDate.toDayOfTheWeek()).padding()
-            }.padding(.top)
+            DatePicker("", selection: $mealDate, in: Date()...) .padding(.top)
 //            Spacer()
             Picker("Meal Time", selection: $mealTime) {
                 

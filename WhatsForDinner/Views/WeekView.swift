@@ -10,7 +10,6 @@ import SwiftUI
 
 struct WeekView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
-    var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     var days = [DayDetail]()
     var meals: [Meal]
     
@@ -22,10 +21,10 @@ struct WeekView: View {
                 Image("meal-icon").resizable()
                 Divider()
                 List {
-                    ForEach(daysOfTheWeek, id: \.self) { day in
+                    ForEach(Day.allCases, id: \.self) { day in
                         
-                        NavigationLink (destination: DayDetail(dayOfTheWeek: day, meals:Array(self.meals))) {
-                                Text(day)
+                        NavigationLink (destination: DayDetail(dayOfTheWeek: day.rawValue, meals:Array(self.meals))) {
+                            Text(day.rawValue)
                         }
                         .navigationBarTitle("This Week")
                     }
