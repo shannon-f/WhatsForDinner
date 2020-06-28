@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+// TODO convert this to using actual dates behind the scenes
 struct DayPickerView: View {
 //    @Binding var mealDay : Day?
     @State var mealDay = ""

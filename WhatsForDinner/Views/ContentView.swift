@@ -33,7 +33,7 @@ struct ContentView: View {
                     Text("Create Meal")
                 }
             }.tag(1)
-            VStack{
+            ScrollView {
                 // TODO sort chronologically
                 ForEach(meals, id: \.self) { meal in
                     MealView(meal: meal)
