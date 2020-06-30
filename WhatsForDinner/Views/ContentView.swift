@@ -23,6 +23,7 @@ struct ContentView: View {
             VStack {
                 WeekView(meals: Array(meals))
             }.tabItem {
+                Image(systemName: "calendar")
                 Text("Week")
             }.tag(0)
             VStack {
@@ -40,6 +41,7 @@ struct ContentView: View {
                 }
             }.tabItem {
                 VStack {
+                    Image("knife-and-fork-icon")
                     Text("Meals")
                 }
             }.tag(2)
