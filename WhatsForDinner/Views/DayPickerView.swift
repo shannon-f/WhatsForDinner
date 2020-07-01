@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-// TODO convert this to using actual dates behind the scenes
+
 struct DayPickerView: View {
     @Binding var mealDay : Date
         
@@ -16,23 +16,14 @@ struct DayPickerView: View {
         let daysOfTheWeek = getNext7Days()
         return Picker("Meal Day", selection: $mealDay) {
             ForEach(daysOfTheWeek, id: \.self) { date in
-                
                 Text((date.toDayOfTheWeek()).prefix(2)).border(Color.blue).frame(width: 400, height: 200)
-                
-                
             }
-            }.pickerStyle(SegmentedPickerStyle()).padding()
-    }
-    
-    func getWeekdays() -> [String] {
-        let calendar = Calendar(identifier: .gregorian)
-        return calendar.weekdaySymbols
+        }.pickerStyle(SegmentedPickerStyle()).padding()
     }
     
     func getNext7Days() -> [Date] {
         var dates = [Date]()
         let calendar = Calendar(identifier: .gregorian)
-        
         for i in 0...6 {
             let date = calendar.date(byAdding: .day, value: i, to: Date())!
             dates.append(date)

@@ -413,6 +413,7 @@
 				DEVELOPMENT_TEAM = 5Q39T6ZM5D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WhatsForDinner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,6 +434,7 @@
 				DEVELOPMENT_TEAM = 5Q39T6ZM5D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WhatsForDinner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

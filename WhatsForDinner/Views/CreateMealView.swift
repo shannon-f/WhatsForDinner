@@ -27,7 +27,6 @@ struct CreateMealView: View {
     var body: some View {
        
         VStack {
-            // TODO improve the date picker, maybe only display days of the week and convert that to a date, maybe even tie the day of the week segmented picker to the date picker?
 //            DatePicker("", selection: $mealDate, in: Date()...) .padding(.top)
 //            Spacer()
             DayPickerView(mealDay: $day).padding()

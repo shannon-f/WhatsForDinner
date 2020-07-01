@@ -34,12 +34,8 @@ struct ContentView: View {
                     Text("Create Meal")
                 }
             }.tag(1)
-            ScrollView {
-                // TODO sort chronologically
-                ForEach(meals, id: \.self) { meal in
-                    MealView(meal: meal)
-                }
-            }.tabItem {
+            AllMealsView(meals: Array(meals))
+                .tabItem {
                 VStack {
                     Image("knife-and-fork-icon")
                     Text("Meals")
@@ -47,10 +43,38 @@ struct ContentView: View {
             }.tag(2)
         }
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+    }
+}
+
+struct AllMealsView: View {
+    var meals: [Meal]
+     @Environment(\.managedObjectContext) var managedObjectContext
+    
+    var body: some View {
+        return List {
+            ForEach(meals, id: \.self) { meal in
+                MealView(meal: meal)
+            }.onDelete(perform: deleteMeal)
+            
+        }
+    }
+    func deleteMeal(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this meal in our fetch request
+            let meal = meals[offset]
+
+            // delete it from the context
+            managedObjectContext.delete(meal)
+        }
+
+        // save the context
+        try? managedObjectContext.save()
     }
 }

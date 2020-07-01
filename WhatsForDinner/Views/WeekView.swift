@@ -22,7 +22,9 @@ struct WeekView: View {
                 List {
                     ForEach(Day.allCases, id: \.self) { day in
                         
-                        NavigationLink (destination: DayDetail(dayOfTheWeek: day.rawValue, meals:Array(self.meals))) {
+                        NavigationLink (destination: DayDetail(dayOfTheWeek: day.rawValue, meals:Array(self.meals.filter {
+                            return $0.date!.toDayOfTheWeek() == day.rawValue
+                        }), isAllMealsView: false)) {
                             Text(day.rawValue)
                         }
                         .navigationBarTitle("This Week")

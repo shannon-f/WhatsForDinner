@@ -12,21 +12,25 @@ import CoreData
 struct DayDetail: View {
     var dayOfTheWeek : String
     var meals : [Meal]
+    var isAllMealsView : Bool
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
     var body: some View {
-        VStack {
+
             List {
-                ForEach(self.meals.filter {
+                if (self.meals.filter {
                     return $0.date!.toDayOfTheWeek() == dayOfTheWeek
-                }, id: \.self) { meal in
+                }.count != 0 || !isAllMealsView){
+                    HStack {
+                        Text(dayOfTheWeek).font(.largeTitle).padding()
+                        Spacer()
+                    }
+                }
+                ForEach(self.meals, id: \.self) { meal in
                     MealView(meal: meal)
                 }.onDelete(perform: deleteMeal)
             }
-            Spacer()
-        }
-        
     }
     
     func deleteMeal(at offsets: IndexSet) {
@@ -53,7 +57,7 @@ struct DayView_Previews: PreviewProvider {
         newMeal.side1 = "Bacon"
         newMeal.side2 = "Toast"
         newMeal.date = Date()
-        return DayDetail(dayOfTheWeek: newMeal.date!.toDayOfTheWeek(), meals: [newMeal])
+        return DayDetail(dayOfTheWeek: newMeal.date!.toDayOfTheWeek(), meals: [newMeal], isAllMealsView: false)
         
     }
 }
