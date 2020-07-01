@@ -35,7 +35,8 @@ struct WeekView: View {
 
 struct WeekView_Previews: PreviewProvider {
     static var previews: some View {
-        let newMeal = Meal()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let newMeal = Meal.init(context: context)
         newMeal.mealTime = MealTime.Breakfast.rawValue
         newMeal.date = Date()
         newMeal.entree = "Eggs"
@@ -43,6 +44,6 @@ struct WeekView_Previews: PreviewProvider {
         newMeal.side2 = "Toast"
         
         let meals = [newMeal]
-        return WeekView(meals: meals).environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        return WeekView(meals: meals)
     }
 }
