@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct DayDetail: View {
     var dayOfTheWeek : String
     var meals : [Meal]
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     var body: some View {
         VStack {
@@ -19,11 +22,24 @@ struct DayDetail: View {
                     return $0.date!.toDayOfTheWeek() == dayOfTheWeek
                 }, id: \.self) { meal in
                     MealView(meal: meal)
-                }
+                }.onDelete(perform: deleteMeal)
             }
             Spacer()
         }
         
+    }
+    
+    func deleteMeal(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this meal in our fetch request
+            let meal = meals[offset]
+
+            // delete it from the context
+            managedObjectContext.delete(meal)
+        }
+
+        // save the context
+        try? managedObjectContext.save()
     }
 }
 
