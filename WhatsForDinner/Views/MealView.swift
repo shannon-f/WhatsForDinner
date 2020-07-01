@@ -16,7 +16,7 @@ struct MealView: View {
             HStack {
                 VStack {
                     HStack {
-                        Text(self.meal.date?.toDayOfTheWeek() ?? "").font(.largeTitle).padding()
+                        Text(self.meal.date?.toDayOfTheWeek() ?? "").font(.largeTitle).padding(.leading)
                         Spacer()
                     }
                     HStack {
@@ -30,17 +30,17 @@ struct MealView: View {
             HStack {
                 VStack {
                     HStack {
-                        Text(self.meal.entree ?? "").padding()
+                        Text(self.meal.entree ?? "").padding(.leading)
                         Spacer()
                     }
                     Divider()
                     HStack {
-                        Text(self.meal.side1 ?? "").padding()
+                        Text(self.meal.side1 ?? "").padding(.leading)
                         Spacer()
                     }
                     Divider()
                     HStack {
-                        Text(self.meal.side2 ?? "").padding()
+                        Text(self.meal.side2 ?? "").padding(.leading)
                         Spacer()
                     }
                 }
