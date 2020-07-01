@@ -16,7 +16,7 @@ struct WeekView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // TODO replace this with collage of week's meal images?
+                // TODO replace this with collage of week's meal images? Or a calendar?
                 Image("meal-icon").resizable()
                 Divider()
                 List {

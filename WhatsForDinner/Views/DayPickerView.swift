@@ -9,24 +9,40 @@
 import SwiftUI
 // TODO convert this to using actual dates behind the scenes
 struct DayPickerView: View {
-//    @Binding var mealDay : Day?
-    @State var mealDay = ""
+    @Binding var mealDay : Date
+        
     
     var body: some View {
-        Picker("Meal Day", selection: $mealDay) {
-            ForEach(Day.allCases, id: \.self) { day in
+        let daysOfTheWeek = getNext7Days()
+        return Picker("Meal Day", selection: $mealDay) {
+            ForEach(daysOfTheWeek, id: \.self) { date in
                 
-                Text((day.rawValue).prefix(2)).border(Color.blue).frame(width: 400, height: 200).tag(day.rawValue)
+                Text((date.toDayOfTheWeek()).prefix(2)).border(Color.blue).frame(width: 400, height: 200)
                 
                 
             }
-        }.pickerStyle(SegmentedPickerStyle()).padding()
+            }.pickerStyle(SegmentedPickerStyle()).padding()
+    }
+    
+    func getWeekdays() -> [String] {
+        let calendar = Calendar(identifier: .gregorian)
+        return calendar.weekdaySymbols
+    }
+    
+    func getNext7Days() -> [Date] {
+        var dates = [Date]()
+        let calendar = Calendar(identifier: .gregorian)
+        
+        for i in 0...6 {
+            let date = calendar.date(byAdding: .day, value: i, to: Date())!
+            dates.append(date)
+        }
+        return dates
     }
 }
 
 struct DaySelectorView_Previews: PreviewProvider {
     static var previews: some View {
-//        DayPickerView(mealDay: .constant(.Monday))
-        DayPickerView()
+        DayPickerView(mealDay: .constant(Date()))
     }
 }

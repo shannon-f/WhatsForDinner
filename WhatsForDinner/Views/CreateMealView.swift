@@ -16,18 +16,13 @@ struct CreateMealView: View {
     @State var mealTime = ""
     @State var side1  = ""
     @State var side2  = ""
-    @State var day : Day?
-    
-    
-
+    @State var day = Date()
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         return formatter
     }
-
-    @State private var mealDate = Date()
     
     var body: some View {
        
@@ -35,7 +30,7 @@ struct CreateMealView: View {
             // TODO improve the date picker, maybe only display days of the week and convert that to a date, maybe even tie the day of the week segmented picker to the date picker?
 //            DatePicker("", selection: $mealDate, in: Date()...) .padding(.top)
 //            Spacer()
-            DayPickerView().padding()
+            DayPickerView(mealDay: $day).padding()
             Picker("Meal Time", selection: $mealTime) {
                 
                 ForEach(MealTime.allCases, id: \.self) { mealTime in
@@ -44,6 +39,7 @@ struct CreateMealView: View {
             }
             .pickerStyle(SegmentedPickerStyle()).padding()
 //            Divider()
+            // TODO refactor to have variable number of meal items
             TextField("Entree", text: $entree).padding()
             TextField("Side 1", text: $side1).padding()
             TextField("Side 2", text: $side2).padding()
@@ -62,20 +58,32 @@ struct CreateMealView: View {
         newMeal.entree = entree
         newMeal.side1 = side1
         newMeal.side2 = side2
-        newMeal.date = mealDate
+        newMeal.date = day
         newMeal.mealTime = mealTime
         do {
           try managedObjectContext.save()
+            // TODO navigate to newly created meal?
         } catch let error as NSError {
           //todo Show error message to user?
           print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
+//    func getEarliestDateFor(dayOfTheWeek: Day) -> Date? {
+//        let calendar = Calendar(identifier: .gregorian)
+//        let dateComponents = DateComponents()
+//        dateComponents.day =
+//        guard let date = calendar.nextDate(after: Date(), matching: dateComponents, matchingPolicy: .strict) else {
+//            return Date()
+//        }
+//
+//        return date
+//    }
 }
 
 struct CreateMealView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateMealView(day: Day.Monday).environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        CreateMealView(day: Date()).environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     }
 }
 
